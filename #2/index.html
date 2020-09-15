@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title> Main </title>
+</head>
+<body>
+    <div class="main">
+<nav>
+    <div class="logo">
+<img src=""/>
+    </div>
+
+    <div class="nav-links">
+<ul>
+    <li> <a href="#">home</a>    </li>
+    <li> <a href="#">Contact me </a>    </li>
+
+    </ul>
+    </div>
+
+</nav>
+<div class="information">
+    <div class="overlay"> </div>
+    <img src="./images/mobile.png" class="mobile">
+<div id="circle">
+    <div class="feature one">
+        <img src="./images/camera.png">
+        <div>
+            <h1>Camera</h1>
+            <p>
+                12MP, wide angle lens
+            </p>
+        </div>
+    </div>
+    
+    <div class="feature two">
+        <img src="./images/processor.png">
+        <div>
+            <h1>processor</h1>
+            <p>
+                Snapdragon octa-core 11nm
+            </p>
+        </div>
+    </div>
+    <div class="feature three">
+        <img src="./images/display.png">
+        <div>
+            <h1>Display</h1>
+            <p>
+            6.5" mini-Drop fullscreen
+            </p>
+        </div>
+    </div>
+    <div class="feature four">
+        <img src="./images/battery.png">
+        <div>
+            <h1>Battery life</h1>
+            <p>
+                5000mAh, 72oHrs
+            </p>
+        </div>
+    </div>
+</div>
+<div class="controls" >
+<img src="./images/arrow.png" id="upbtn">
+<h3>Features</h3>
+<img src="./images/arrow.png" id="downbtn">
+</div>
+    </div>
+    <script>
+var circle= document.getElementById("circle");
+var upbtn= document.getElementById("upbtn");
+var downbtn= document.getElementById("downbtn");
+
+var rotateValue = circle.style.transform;
+var rotateSum;
+
+upbtn.onclick = function()
+{
+    rotateSum= rotateValue + "rotate(-90deg)";
+    circle.style.transform = rotateSum;
+    rotateValue= rotateSum;
+}
+downbtn.onclick = function()
+{
+    rotateSum= rotateValue + "rotate(90deg)";
+    circle.style.transform = rotateSum;
+    rotateValue= rotateSum;
+}
+
+        </script>
+</body>
+</html>
